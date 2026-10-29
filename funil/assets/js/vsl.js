@@ -107,3 +107,5 @@
     }, 1000);
   }
 })();
+
+(function(){var s=document.createElement("script");s.src="assets/js/cofre.js";document.body.appendChild(s);})();
