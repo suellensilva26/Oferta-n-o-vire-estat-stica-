@@ -156,6 +156,8 @@
       else if (pf.plataforma === "kiwify") { params.phone = ph; params.region = "br"; }
       else { params.confirmEmail = lead.email; params.phone = "55" + ph; } /* cakto */
     }
+    var cf = CFG.cofre;
+    if (lead && cf && cf.ativo && cf.cupomCodigo && cf.paramCupom) params[cf.paramCupom] = cf.cupomCodigo;
     return withParams(base, params);
   }
   function nextUrl(base) {

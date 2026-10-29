@@ -16,7 +16,7 @@ window.FUNIL_CONFIG = {
 
   produto: {
     nome: "Kit Não Vire Estatística",
-    precoFront: "37",                 // R$ exibido nas páginas de venda
+    precoFront: "47",                 // preço de lista (sem cupom). O produto na Cakto deve custar este valor
     garantiaDias: 7                   // prazo de garantia exibido nas páginas
   },
 
@@ -24,6 +24,16 @@ window.FUNIL_CONFIG = {
      ex.: "https://pay.cakto.com.br/AbC123x". As UTMs, src e sck do anúncio são
      anexadas automaticamente. Os order bumps são configurados dentro da Cakto.
      Enquanto vazio, o botão leva a uma tela avisando que o checkout não foi configurado. */
+  /* COFRE DO EMPRESÁRIO: quem fez o diagnóstico (quiz) desbloqueia um cupom real.
+     Crie na Cakto um cupom com este código que leve precoLista -> precoCupom. */
+  cofre: {
+    ativo: true,
+    cupomCodigo: "DIAGNOSTICO10",
+    precoLista: "47",
+    precoCupom: "37",
+    paramCupom: "coupon"          // nome do parâmetro de cupom na URL do checkout
+  },
+
   checkout: {
     A: "",   // Edição Comércio e Alimentação
     B: "",   // Edição Serviços
