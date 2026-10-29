@@ -53,7 +53,7 @@ window.FUNIL_CONFIG = {
      YouTube: "https://www.youtube.com/embed/ID"). Vazio = placeholder.
      ctaSegundos = em que segundo do vídeo o botão de compra aparece (início do pitch). */
   vsl: {
-    A: { embedUrl: "", ctaSegundos: 420 },
+    A: { embedUrl: "", ctaSegundos: 183 },
     B: { embedUrl: "", ctaSegundos: 420 },
     C: { embedUrl: "", ctaSegundos: 420 }
   },
