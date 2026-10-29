@@ -1,0 +1,59 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Checklist da Reforma — Comércio e Alimentação</title><style>
+@page{size:A4;margin:18mm 16mm 18mm 16mm}
+@page:first{margin:0}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,Arial,sans-serif;color:#141a26;font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;color:#0b1220;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:22pt;margin:0 0 10pt;font-weight:900}
+h2{font-size:15pt;margin:20pt 0 8pt;font-weight:800;border-left:5px solid #fcc419;padding-left:10px}
+h3{font-size:12pt;margin:14pt 0 6pt;font-weight:800}
+p{margin:0 0 8pt}ul,ol{margin:0 0 9pt;padding-left:18pt}li{margin-bottom:3pt}
+a{color:#0b6b35}
+.cover{height:297mm;width:210mm;background:#05080f;color:#f5f7fb;padding:30mm 20mm;position:relative;page-break-after:always;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:-40mm -40mm auto auto;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle,rgba(252,196,25,.22),transparent 65%)}
+.cover .kick{font-family:Montserrat;font-weight:800;letter-spacing:.2em;font-size:9pt;color:#fcc419;text-transform:uppercase}
+.cover h1{color:#fff;font-size:34pt;line-height:1.06;margin:14pt 0 12pt;max-width:160mm}
+.cover h1 em{font-style:normal;color:#fcc419}
+.cover .sub{font-size:13pt;color:#cbd5e1;max-width:150mm}
+.cover .badge{display:inline-block;margin-top:18pt;background:#22c55e;color:#04210f;font-weight:800;padding:7pt 12pt;border-radius:8pt;font-size:10pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:8.5pt;color:#8b98ad;border-top:1px solid rgba(255,255,255,.15);padding-top:8pt}
+.cover .mark{width:46pt;height:46pt;border-radius:12pt;background:linear-gradient(135deg,#fcc419,#f59f00);display:flex;align-items:center;justify-content:center;font:900 22pt Montserrat;color:#1a1300;margin-bottom:26pt}
+.pb{page-break-before:always}
+.avoid{page-break-inside:avoid}
+.box{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt 12pt;margin:10pt 0;background:#f8fafc;page-break-inside:avoid}
+.box.gold{background:#fff8e1;border-color:#f5d36b}
+.box.green{background:#ecfdf3;border-color:#a7e9c0}
+.box.red{background:#fef2f2;border-color:#f6c1c1}
+.box.dark{background:#0b1220;color:#e7ecf5;border-color:#0b1220}.box.dark h3{color:#fcc419;margin-top:0}
+.box h3:first-child{margin-top:0}
+.kick{font-family:Montserrat;font-weight:800;letter-spacing:.14em;font-size:8pt;color:#b7860b;text-transform:uppercase}
+.big{font:900 26pt Montserrat;color:#0b1220;line-height:1}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8pt;margin:10pt 0}
+.stat{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt;page-break-inside:avoid}
+.stat b{display:block;font:900 20pt Montserrat;color:#0b1220}.stat span{font-size:9pt;color:#4b5565}.stat i{display:block;font-style:normal;font-size:7.5pt;color:#8b98ad;margin-top:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;page-break-inside:auto}
+th{background:#0b1220;color:#fff;text-align:left;padding:6pt 7pt;font-weight:700}
+td{border-bottom:1px solid #e3e7ef;padding:6pt 7pt;vertical-align:top}
+tr{page-break-inside:avoid}
+tr:nth-child(even) td{background:#f8fafc}
+.n{text-align:right;white-space:nowrap}
+.chk{display:flex;gap:8pt;padding:6pt 0;border-bottom:1px dashed #d5dbe5;page-break-inside:avoid}
+.chk:before{content:"";flex:0 0 11pt;height:11pt;border:1.6px solid #0b1220;border-radius:3pt;margin-top:2pt}
+.small{font-size:8.8pt}.muted{color:#5b6576}
+.src{font-size:7.8pt;color:#6b7585}
+.pill{display:inline-block;font-size:7.5pt;font-weight:800;padding:1pt 6pt;border-radius:20pt;background:#eef2f7;color:#334155;letter-spacing:.04em;text-transform:uppercase}
+.pill.caixa{background:#e0f2fe;color:#075985}.pill.margem{background:#fef3c7;color:#92400e}.pill.fiscal{background:#ede9fe;color:#5b21b6}
+.toc li{margin-bottom:5pt}
+.line{border-bottom:1px solid #9aa3b2;height:18pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.script{border-left:4px solid #22c55e;background:#f4fbf6;padding:8pt 11pt;margin:7pt 0 10pt;border-radius:0 8pt 8pt 0;page-break-inside:avoid;white-space:pre-wrap}
+.faca{border:2px solid #22c55e;border-radius:10pt;padding:9pt 12pt;margin:10pt 0;background:#f0fdf4;page-break-inside:avoid}
+.faca:before{content:"FAÇA AGORA";display:block;font:800 8pt Montserrat;letter-spacing:.14em;color:#15803d;margin-bottom:4pt}
+.nota{font-size:9pt;color:#4b5565;border-left:3px solid #cbd5e1;padding-left:8pt}
+.footer-note{font-size:7.8pt;color:#8b98ad;margin-top:16pt;border-top:1px solid #e3e7ef;padding-top:6pt}
+</style></head><body><style>@page:first{margin:12mm 14mm}body{font-size:9.6pt}</style>
+<div style="display:flex;align-items:center;gap:10pt;border-bottom:3px solid #fcc419;padding-bottom:6pt;margin-bottom:8pt"><div style="width:30pt;height:30pt;border-radius:8pt;background:#fcc419;display:flex;align-items:center;justify-content:center;font:900 15pt Montserrat">N</div><div><div class="kick">Checklist da Reforma · Comércio e Alimentação</div><h1 style="font-size:16pt;margin:0">O que deixar pronto antes de 2027</h1></div></div>
+<p class="small" style="margin-bottom:4pt">Marque o que já está feito. O que ficar em branco vira pergunta para o contador. <b>Datas-chave:</b> 30/10/2026 (opção do Simples para jan–jun/2027) · 15/12/2026 (alíquota oficial da CBS) · 01/01/2027 (CBS no lugar de PIS/Cofins) · março/2027 (janela do Simples) · 2º sem/2027 (split payment gradual).</p>
+<div class="chk" style="padding:4.5pt 0"><div class="small">Sei meu regime tributário (MEI, Simples, Presumido ou Real) e a minha alíquota efetiva dos últimos 12 meses.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Meu sistema de notas/PDV já emite com os campos de CBS e IBS (teste de 2026).</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Meu cadastro de produtos/serviços está com NCM ou código de serviço corretos (é isso que define alíquota reduzida ou cheia).</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Conversei com o contador sobre o impacto de 2027 e anotei as respostas das 12 perguntas.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Sei se algum item que vendo tem alíquota reduzida (60% ou 30% de redução) ou zero.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Simulei meu preço para 2027 e para o modelo final (2033) no simulador do painel.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Meus contratos e propostas têm cláusula de reajuste por mudança de tributo.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Revisei quais fornecedores me darão crédito de IBS/CBS (regime regular) e quais não (Simples, MEI, pessoa física).</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Tenho fluxo de caixa de 13 semanas atualizado toda semana.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Tenho a data de março de 2027 marcada para rever Simples por dentro x híbrido (se for do Simples).</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Sei que o imposto separado na hora do pagamento (split payment) vai reduzir o dinheiro que fica no caixa entre vender e recolher.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Anotei 15/12/2026 para atualizar o simulador com a alíquota oficial da CBS.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Revisei a tabela de preços do balcão e do delivery para janeiro de 2027.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Sei quais itens da minha venda são da cesta básica (alíquota zero) ou têm redução de 60%.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Confirmei com a maquininha/banco como vão tratar o split payment e as taxas.</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Organizei as notas de compra dos fornecedores: no modelo novo, compra com nota gera crédito (se eu estiver no regime regular).</div></div><div class="chk" style="padding:4.5pt 0"><div class="small">Se vendo bebidas açucaradas ou alcoólicas, sei que o Imposto Seletivo começa em 2027 e pode mudar o preço do fornecedor.</div></div>
+<p class="src" style="margin-top:6pt">Fontes: EC 132/2023; LC 214/2025; Resolução CGSN 194/2026; Receita Federal; Comsefaz. Conteúdo educativo, não substitui o contador. Kit Não Vire Estatística.</p></body></html>

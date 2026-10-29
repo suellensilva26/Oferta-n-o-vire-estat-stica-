@@ -1,0 +1,59 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Roteiro de reunião com o contador</title><style>
+@page{size:A4;margin:18mm 16mm 18mm 16mm}
+@page:first{margin:0}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,Arial,sans-serif;color:#141a26;font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;color:#0b1220;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:22pt;margin:0 0 10pt;font-weight:900}
+h2{font-size:15pt;margin:20pt 0 8pt;font-weight:800;border-left:5px solid #fcc419;padding-left:10px}
+h3{font-size:12pt;margin:14pt 0 6pt;font-weight:800}
+p{margin:0 0 8pt}ul,ol{margin:0 0 9pt;padding-left:18pt}li{margin-bottom:3pt}
+a{color:#0b6b35}
+.cover{height:297mm;width:210mm;background:#05080f;color:#f5f7fb;padding:30mm 20mm;position:relative;page-break-after:always;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:-40mm -40mm auto auto;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle,rgba(252,196,25,.22),transparent 65%)}
+.cover .kick{font-family:Montserrat;font-weight:800;letter-spacing:.2em;font-size:9pt;color:#fcc419;text-transform:uppercase}
+.cover h1{color:#fff;font-size:34pt;line-height:1.06;margin:14pt 0 12pt;max-width:160mm}
+.cover h1 em{font-style:normal;color:#fcc419}
+.cover .sub{font-size:13pt;color:#cbd5e1;max-width:150mm}
+.cover .badge{display:inline-block;margin-top:18pt;background:#22c55e;color:#04210f;font-weight:800;padding:7pt 12pt;border-radius:8pt;font-size:10pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:8.5pt;color:#8b98ad;border-top:1px solid rgba(255,255,255,.15);padding-top:8pt}
+.cover .mark{width:46pt;height:46pt;border-radius:12pt;background:linear-gradient(135deg,#fcc419,#f59f00);display:flex;align-items:center;justify-content:center;font:900 22pt Montserrat;color:#1a1300;margin-bottom:26pt}
+.pb{page-break-before:always}
+.avoid{page-break-inside:avoid}
+.box{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt 12pt;margin:10pt 0;background:#f8fafc;page-break-inside:avoid}
+.box.gold{background:#fff8e1;border-color:#f5d36b}
+.box.green{background:#ecfdf3;border-color:#a7e9c0}
+.box.red{background:#fef2f2;border-color:#f6c1c1}
+.box.dark{background:#0b1220;color:#e7ecf5;border-color:#0b1220}.box.dark h3{color:#fcc419;margin-top:0}
+.box h3:first-child{margin-top:0}
+.kick{font-family:Montserrat;font-weight:800;letter-spacing:.14em;font-size:8pt;color:#b7860b;text-transform:uppercase}
+.big{font:900 26pt Montserrat;color:#0b1220;line-height:1}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8pt;margin:10pt 0}
+.stat{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt;page-break-inside:avoid}
+.stat b{display:block;font:900 20pt Montserrat;color:#0b1220}.stat span{font-size:9pt;color:#4b5565}.stat i{display:block;font-style:normal;font-size:7.5pt;color:#8b98ad;margin-top:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;page-break-inside:auto}
+th{background:#0b1220;color:#fff;text-align:left;padding:6pt 7pt;font-weight:700}
+td{border-bottom:1px solid #e3e7ef;padding:6pt 7pt;vertical-align:top}
+tr{page-break-inside:avoid}
+tr:nth-child(even) td{background:#f8fafc}
+.n{text-align:right;white-space:nowrap}
+.chk{display:flex;gap:8pt;padding:6pt 0;border-bottom:1px dashed #d5dbe5;page-break-inside:avoid}
+.chk:before{content:"";flex:0 0 11pt;height:11pt;border:1.6px solid #0b1220;border-radius:3pt;margin-top:2pt}
+.small{font-size:8.8pt}.muted{color:#5b6576}
+.src{font-size:7.8pt;color:#6b7585}
+.pill{display:inline-block;font-size:7.5pt;font-weight:800;padding:1pt 6pt;border-radius:20pt;background:#eef2f7;color:#334155;letter-spacing:.04em;text-transform:uppercase}
+.pill.caixa{background:#e0f2fe;color:#075985}.pill.margem{background:#fef3c7;color:#92400e}.pill.fiscal{background:#ede9fe;color:#5b21b6}
+.toc li{margin-bottom:5pt}
+.line{border-bottom:1px solid #9aa3b2;height:18pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.script{border-left:4px solid #22c55e;background:#f4fbf6;padding:8pt 11pt;margin:7pt 0 10pt;border-radius:0 8pt 8pt 0;page-break-inside:avoid;white-space:pre-wrap}
+.faca{border:2px solid #22c55e;border-radius:10pt;padding:9pt 12pt;margin:10pt 0;background:#f0fdf4;page-break-inside:avoid}
+.faca:before{content:"FAÇA AGORA";display:block;font:800 8pt Montserrat;letter-spacing:.14em;color:#15803d;margin-bottom:4pt}
+.nota{font-size:9pt;color:#4b5565;border-left:3px solid #cbd5e1;padding-left:8pt}
+.footer-note{font-size:7.8pt;color:#8b98ad;margin-top:16pt;border-top:1px solid #e3e7ef;padding-top:6pt}
+</style></head><body><section class="cover"><div class="mark">N</div><div class="kick">Roteiro de reunião</div><h1>As 12 perguntas para fazer ao <em>seu contador</em></h1><p class="sub">Leve impresso, anote as respostas e saia da reunião com as decisões de 2027 tomadas.</p><span class=badge>Com perguntas extras por segmento</span><div class="foot">Conteúdo educativo, com dados checados em 28/10/2026. Não substitui contador ou advogado. Connect Mídia · Kit Não Vire Estatística</div></section><h1>Antes da reunião</h1><div class="box"><h3>Leve com você</h3><ul style="margin:0"><li>Faturamento dos últimos 12 meses e o total de impostos pagos.</li><li>Lista dos 20 produtos/serviços que mais vendem, com preço e custo.</li><li>Lista dos 10 maiores fornecedores e o regime de cada um.</li><li>Seus contratos com clientes (se tiver).</li><li>O resultado do diagnóstico e do simulador de preço do app.</li></ul></div>
+<div class="box gold"><h3>Como conduzir</h3><p style="margin:0">Peça 45 minutos. Diga logo no início: "Quero sair daqui sabendo o que muda para mim em 2027 e quais decisões tenho que tomar e quando". Faça as perguntas na ordem. Se a resposta for "depende", pergunte "depende de quê, e quando você me traz a conta?".</p></div>
+<p><b>Empresa:</b> ______________________ &nbsp; <b>Contador:</b> ______________________ &nbsp; <b>Data:</b> ___/___/____</p>
+<h2>As 12 perguntas</h2><div class="avoid" style="margin-bottom:8pt"><b>1. Qual foi a nossa alíquota efetiva (imposto pago ÷ faturamento) nos últimos 12 meses?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>2. Continuamos no regime mais barato para 2027? Vale simular outro regime?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>3. Se somos do Simples: ficar &quot;por dentro&quot; ou ir para o regime regular de IBS/CBS (híbrido)? Qual a conta para o nosso caso?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>4. Quais dos nossos produtos ou serviços têm alíquota reduzida ou zero? Os códigos (NCM/serviço) estão certos?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>5. Quanto de crédito de IBS/CBS vamos ter nas compras? Quais fornecedores não geram crédito?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>6. Qual é o impacto estimado no nosso preço em 2027 (troca do PIS/Cofins pela CBS)?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>7. Nosso sistema de notas já está emitindo com CBS e IBS? O que falta ajustar?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>8. Como o split payment vai afetar o nosso caixa e quando devemos nos preparar?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>9. Temos algum benefício fiscal de ICMS/ISS que vai acabar até 2032?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>10. Que documentos e controles precisamos mudar a partir de janeiro de 2027?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>11. Temos débitos ou parcelamentos com a Receita que precisamos regularizar (podem impedir regime ou crédito)?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>12. Qual é o calendário de decisões que precisamos tomar juntos (março e setembro de cada ano)?</b><div class="line"></div><div class="line"></div></div><h2 class="pb">Perguntas extras por segmento</h2><h3>Comércio e Alimentação</h3><div class="avoid" style="margin-bottom:8pt"><b>Os itens da cesta básica e de alimentação que vendemos estão com a classificação correta?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>Como fica o preço dos produtos com Imposto Seletivo (bebidas) que compramos?</b><div class="line"></div><div class="line"></div></div><h3>Serviços</h3><div class="avoid" style="margin-bottom:8pt"><b>A nossa atividade tem direito à redução de 30% (profissão regulamentada) ou de 60% (saúde/educação)?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>Com folha alta e poucos créditos, qual é o melhor regime para nós a partir de 2027?</b><div class="line"></div><div class="line"></div></div><h3>Indústria, Agro e B2B</h3><div class="avoid" style="margin-bottom:8pt"><b>Como ficam os créditos de energia, frete, máquinas e insumos no modelo novo?</b><div class="line"></div><div class="line"></div></div><div class="avoid" style="margin-bottom:8pt"><b>Qual o impacto do fim gradual dos benefícios de ICMS no nosso preço de 2029 em diante?</b><div class="line"></div><div class="line"></div></div>
+<h2>Decisões e prazos combinados</h2><table><tr><th>Decisão</th><th>Responsável</th><th>Prazo</th></tr><tr><td style='height:22pt'></td><td></td><td></td></tr><tr><td style='height:22pt'></td><td></td><td></td></tr><tr><td style='height:22pt'></td><td></td><td></td></tr><tr><td style='height:22pt'></td><td></td><td></td></tr><tr><td style='height:22pt'></td><td></td><td></td></tr><tr><td style='height:22pt'></td><td></td><td></td></tr></table></body></html>

@@ -1,0 +1,116 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Aulas do Kit Implementação 2027</title><style>
+@page{size:A4;margin:18mm 16mm 18mm 16mm}
+@page:first{margin:0}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,Arial,sans-serif;color:#141a26;font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;color:#0b1220;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:22pt;margin:0 0 10pt;font-weight:900}
+h2{font-size:15pt;margin:20pt 0 8pt;font-weight:800;border-left:5px solid #fcc419;padding-left:10px}
+h3{font-size:12pt;margin:14pt 0 6pt;font-weight:800}
+p{margin:0 0 8pt}ul,ol{margin:0 0 9pt;padding-left:18pt}li{margin-bottom:3pt}
+a{color:#0b6b35}
+.cover{height:297mm;width:210mm;background:#05080f;color:#f5f7fb;padding:30mm 20mm;position:relative;page-break-after:always;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:-40mm -40mm auto auto;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle,rgba(252,196,25,.22),transparent 65%)}
+.cover .kick{font-family:Montserrat;font-weight:800;letter-spacing:.2em;font-size:9pt;color:#fcc419;text-transform:uppercase}
+.cover h1{color:#fff;font-size:34pt;line-height:1.06;margin:14pt 0 12pt;max-width:160mm}
+.cover h1 em{font-style:normal;color:#fcc419}
+.cover .sub{font-size:13pt;color:#cbd5e1;max-width:150mm}
+.cover .badge{display:inline-block;margin-top:18pt;background:#22c55e;color:#04210f;font-weight:800;padding:7pt 12pt;border-radius:8pt;font-size:10pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:8.5pt;color:#8b98ad;border-top:1px solid rgba(255,255,255,.15);padding-top:8pt}
+.cover .mark{width:46pt;height:46pt;border-radius:12pt;background:linear-gradient(135deg,#fcc419,#f59f00);display:flex;align-items:center;justify-content:center;font:900 22pt Montserrat;color:#1a1300;margin-bottom:26pt}
+.pb{page-break-before:always}
+.avoid{page-break-inside:avoid}
+.box{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt 12pt;margin:10pt 0;background:#f8fafc;page-break-inside:avoid}
+.box.gold{background:#fff8e1;border-color:#f5d36b}
+.box.green{background:#ecfdf3;border-color:#a7e9c0}
+.box.red{background:#fef2f2;border-color:#f6c1c1}
+.box.dark{background:#0b1220;color:#e7ecf5;border-color:#0b1220}.box.dark h3{color:#fcc419;margin-top:0}
+.box h3:first-child{margin-top:0}
+.kick{font-family:Montserrat;font-weight:800;letter-spacing:.14em;font-size:8pt;color:#b7860b;text-transform:uppercase}
+.big{font:900 26pt Montserrat;color:#0b1220;line-height:1}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8pt;margin:10pt 0}
+.stat{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt;page-break-inside:avoid}
+.stat b{display:block;font:900 20pt Montserrat;color:#0b1220}.stat span{font-size:9pt;color:#4b5565}.stat i{display:block;font-style:normal;font-size:7.5pt;color:#8b98ad;margin-top:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;page-break-inside:auto}
+th{background:#0b1220;color:#fff;text-align:left;padding:6pt 7pt;font-weight:700}
+td{border-bottom:1px solid #e3e7ef;padding:6pt 7pt;vertical-align:top}
+tr{page-break-inside:avoid}
+tr:nth-child(even) td{background:#f8fafc}
+.n{text-align:right;white-space:nowrap}
+.chk{display:flex;gap:8pt;padding:6pt 0;border-bottom:1px dashed #d5dbe5;page-break-inside:avoid}
+.chk:before{content:"";flex:0 0 11pt;height:11pt;border:1.6px solid #0b1220;border-radius:3pt;margin-top:2pt}
+.small{font-size:8.8pt}.muted{color:#5b6576}
+.src{font-size:7.8pt;color:#6b7585}
+.pill{display:inline-block;font-size:7.5pt;font-weight:800;padding:1pt 6pt;border-radius:20pt;background:#eef2f7;color:#334155;letter-spacing:.04em;text-transform:uppercase}
+.pill.caixa{background:#e0f2fe;color:#075985}.pill.margem{background:#fef3c7;color:#92400e}.pill.fiscal{background:#ede9fe;color:#5b21b6}
+.toc li{margin-bottom:5pt}
+.line{border-bottom:1px solid #9aa3b2;height:18pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.script{border-left:4px solid #22c55e;background:#f4fbf6;padding:8pt 11pt;margin:7pt 0 10pt;border-radius:0 8pt 8pt 0;page-break-inside:avoid;white-space:pre-wrap}
+.faca{border:2px solid #22c55e;border-radius:10pt;padding:9pt 12pt;margin:10pt 0;background:#f0fdf4;page-break-inside:avoid}
+.faca:before{content:"FAÇA AGORA";display:block;font:800 8pt Montserrat;letter-spacing:.14em;color:#15803d;margin-bottom:4pt}
+.nota{font-size:9pt;color:#4b5565;border-left:3px solid #cbd5e1;padding-left:8pt}
+.footer-note{font-size:7.8pt;color:#8b98ad;margin-top:16pt;border-top:1px solid #e3e7ef;padding-top:6pt}
+</style></head><body><style>.aulabox h3{font-size:12pt}.aulabox table{font-size:9pt}</style><section class="cover"><div class="mark">N</div><div class="kick">Kit Implementação 2027</div><h1>Apostila das <em>4 aulas</em> de implementação</h1><p class="sub">Simples por dentro x híbrido · Preço para 2027 · Cobrança e renegociação · Split payment no fluxo de caixa</p><span class=badge>Também no app, com leitura em voz</span><div class="foot">Conteúdo educativo, com dados checados em 28/10/2026. Não substitui contador ou advogado. Connect Mídia · Kit Não Vire Estatística</div></section><h1>Como estudar</h1><p>Uma aula por dia, de 15 a 20 minutos. Cada aula termina com um <b>"Faça agora"</b>: a tarefa prática que transforma a aula em resultado. No app (aba Aulas) você pode ouvir a aula pelo celular enquanto faz outra coisa.</p><ol><li>Aula 1 · Simples por dentro x híbrido</li><li>Aula 2 · Preço para 2027</li><li>Aula 3 · Cobrança e renegociação na prática</li><li>Aula 4 · Split payment no fluxo de caixa</li></ol><p class="nota">As aulas em vídeo serão adicionadas na mesma área de acesso. O conteúdo desta apostila é o mesmo das aulas.</p><div class="pb"></div><div class="kick">18 min · Como decidir com números, e não no achismo</div><h1>Aula 1 · Simples por dentro x híbrido</h1><div class="aulabox">
+<h3>O que está em jogo</h3>
+<p>A partir de 2027, a empresa do Simples pode continuar pagando IBS e CBS dentro do DAS (padrão) ou optar pelo regime regular desses dois tributos (o "híbrido"), pagando o resto (IR, CSLL, CPP etc.) no DAS. As janelas de opção são em <b>março</b> (efeito no 2º semestre) e <b>setembro</b> (efeito em janeiro do ano seguinte). Excepcionalmente, a opção para jan–jun/2027 vai até <b>30/10/2026</b>, com cancelamento possível de 03/11 a 20/12/2026 (Serpro; Manual da Receita).</p>
+<h3>Regra de bolso (não substitui a conta)</h3>
+<table><tr><th>Seu perfil</th><th>Tendência</th></tr>
+<tr><td>Vende quase tudo para consumidor final (pessoa física)</td><td>Ficar por dentro</td></tr>
+<tr><td>Vende muito para empresas do Lucro Presumido/Real que exigem crédito</td><td>Avaliar o híbrido</td></tr>
+<tr><td>Compra muito com nota de fornecedores do regime regular</td><td>O híbrido aproveita esses créditos</td></tr>
+<tr><td>Margem baixa e pouca compra com nota</td><td>Por dentro costuma ser mais barato</td></tr></table>
+<h3>A conta em 4 passos</h3>
+<ol><li><b>Por dentro:</b> peça ao contador quanto do seu DAS corresponde a IBS/CBS e quanto é o DAS total.</li>
+<li><b>Híbrido:</b> DAS sem a parte de IBS/CBS + (vendas × alíquota IBS/CBS) − (créditos das compras).</li>
+<li><b>Efeito no cliente:</b> quanto de crédito o seu cliente PJ ganha em cada caso. Se ele ganha mais crédito com você no híbrido, você pode manter ou até subir o preço líquido.</li>
+<li><b>Decisão:</b> compare o lucro final nos dois cenários. Use a aba "Simples x Híbrido" do Painel de Implementação.</li></ol>
+<h3>Cuidados</h3>
+<ul><li>No híbrido, a operação fica mais complexa (apuração de créditos, obrigações). Pergunte ao contador o custo extra do serviço.</li>
+<li>A escolha vale até você renunciar numa janela. Não é para sempre, mas evite trocar toda hora.</li></ul>
+<div class="faca"><b>Exercício:</b> preencha a aba "Simples x Híbrido" da planilha com 3 meses de números reais e leve para o contador com a pergunta 3 do roteiro.</div></div><div class="pb"></div><div class="kick">18 min · Reajustar sem perder cliente</div><h1>Aula 2 · Preço para 2027</h1><div class="aulabox">
+<h3>Por que o preço precisa ser revisto</h3>
+<p>Em 2027 a CBS substitui o PIS/Cofins com alíquota e regra de crédito diferentes. Para quem está no Presumido ou Real, a carga sobre cada produto pode subir ou cair. Para quem está no Simples, o imposto não muda por causa da reforma, mas fornecedores e clientes mudam de comportamento. E a Selic em 13,75% ao ano encarece todo prazo que você dá.</p>
+<h3>Os 3 números de cada produto</h3>
+<ol><li><b>Custo direto</b> (mercadoria, insumo, hora técnica), sem o imposto que vira crédito.</li>
+<li><b>Imposto líquido</b> = imposto da venda − crédito da compra.</li>
+<li><b>Margem de contribuição</b> = preço − custo direto − imposto líquido − taxas (cartão, app, comissão).</li></ol>
+<h3>Como reajustar</h3>
+<ul><li><b>Escalonado:</b> comece pelos itens com margem negativa ou abaixo de 15%.</li>
+<li><b>Ancorado:</b> crie versões (básico/completo) ou kits, em vez de só subir o preço do item.</li>
+<li><b>Comunicado:</b> avise com 15 a 30 dias, explicando a mudança de imposto com transparência.</li>
+<li><b>À vista x prazo:</b> preço à vista no Pix com desconto e preço a prazo com o custo do dinheiro embutido.</li></ul>
+<h3>Preço "por fora"</h3>
+<p>No modelo novo, o imposto aparece destacado. Preço ao cliente = preço líquido × (1 + alíquota). Se o seu sistema mostra o preço "cheio", a conta inversa é: preço líquido = preço cheio ÷ (1 + alíquota). O simulador do painel faz as duas.</p>
+<div class="faca"><b>Exercício:</b> rode os seus 10 campeões de venda no simulador de preço, anote o preço de 2027 na aba "Preço 2027" do Painel e marque a data de comunicar os clientes.</div></div><div class="pb"></div><div class="kick">18 min · Receber o que é seu e pagar menos juros</div><h1>Aula 3 · Cobrança e renegociação na prática</h1><div class="aulabox">
+<h3>Cobrança: processo, não constrangimento</h3>
+<p>Com 9,3 milhões de empresas inadimplentes no país (Serasa Experian, recorde), quem não tem processo de cobrança vira o último da fila. Regras:</p>
+<ul><li>Cobre <b>antes</b> de vencer (D-3). É o lembrete que mais recebe.</li>
+<li>No atraso, ofereça <b>solução</b> (pagar hoje sem juros ou em 2 vezes) antes de ameaçar.</li>
+<li>Registre tudo por escrito (WhatsApp ou e-mail).</li>
+<li>Medidas formais (protesto, negativação) só com aviso prévio e de acordo com a lei e o contrato.</li></ul>
+<h3>Renegociação com banco</h3>
+<ol><li>Leve a lista das dívidas com a taxa ao mês e o CET.</li>
+<li>Peça: troca da dívida cara por linha mais barata (ex.: Pronampe, teto de Selic + 6% ao ano), carência, prazo maior.</li>
+<li>Peça a proposta por escrito com o CET e compare no comparador de dívidas do painel.</li>
+<li>Nunca troque dívida por outra mais cara só para ganhar prazo.</li></ol>
+<h3>Renegociação com fornecedor</h3>
+<p>Fornecedor prefere receber com atraso combinado a perder o cliente. Ofereça: pagamento de parte agora + parcelas, fidelidade ou volume em troca de prazo. Mostre o seu plano de caixa.</p>
+<h3>O que dizer (resumo)</h3>
+<p>"Quero manter a nossa parceria e honrar o que devo. Hoje consigo pagar X agora e o restante em Y vezes, começando em [data]. Isso funciona para você?"</p>
+<div class="faca"><b>Exercício:</b> monte a régua de cobrança para os 5 maiores atrasados e agende a conversa com o banco da dívida mais cara.</div></div><div class="pb"></div><div class="kick">18 min · Prepare a reserva antes que o imposto pare de passar pelo seu caixa</div><h1>Aula 4 · Split payment no fluxo de caixa</h1><div class="aulabox">
+<h3>Recapitulando</h3>
+<p>Com o split payment, previsto para começar de forma gradual e facultativa no 2º semestre de 2027 nas vendas entre empresas, o IBS/CBS é separado no momento do pagamento. Você recebe o líquido.</p>
+<h3>Como colocar no fluxo de 13 semanas</h3>
+<ol><li>Na linha de recebimentos, lance o valor <b>líquido</b> (sem o imposto) das vendas que passarem pelo split.</li>
+<li>Remova da saída do mês seguinte o imposto que já terá sido retido.</li>
+<li>Observe o "buraco" das primeiras semanas: é o dinheiro que antes ficava no caixa até o recolhimento.</li>
+<li>Defina a reserva extra para cobrir esse buraco (aba "Caixa semanal" do Painel).</li></ol>
+<h3>Exemplo ilustrativo</h3>
+<p>Faturamento semanal de R$ 50 mil, carga líquida de 10%: R$ 5 mil por semana deixam de ficar no caixa. Em 4 semanas, R$ 20 mil a menos de capital de giro no período de adaptação.</p>
+<h3>Ações</h3>
+<ul><li>Converse com o banco sobre como ele vai operar o split e as tarifas.</li>
+<li>Negocie prazos com fornecedores antes de 2027.</li>
+<li>Reveja a política de crédito a clientes: prazos longos ficam mais caros.</li></ul>
+<div class="faca"><b>Exercício:</b> rode o fluxo de 13 semanas em dois cenários (com e sem split) e anote a diferença de saldo mínimo.</div></div><h2 class="pb">Fontes</h2><ol class='small'><li><b>Selic 13,75% a.a. desde 16/09/2026</b> — Banco Central — Ata da 281ª reunião do Copom; g1, 16/09/2026 · <a href="https://g1.globo.com/economia/noticia/2026/09/16/copom-reduz-a-taxa-basica-de-juros-da-economia-a-selic-de-14percent-para-1375percent-ao-ano.ghtml">https://g1.globo.com/economia/noticia/2026/09/16/copom-reduz-a-taxa-basica-de-juros-da-economia-a-selic-de-14percent-para-1375percent-ao-ano.ghtml</a></li><li><b>9,3 milhões de empresas inadimplentes (recorde)</b> — Serasa Experian via CNN Brasil, 10/2026 · <a href="https://www.cnnbrasil.com.br/economia/money/macroeconomia/inadimplencia-das-empresas-bate-novo-recorde-no-brasil-diz-serasa-experian/">https://www.cnnbrasil.com.br/economia/money/macroeconomia/inadimplencia-das-empresas-bate-novo-recorde-no-brasil-diz-serasa-experian/</a></li><li><b>2.466 recuperações judiciais em 2025 (recorde)</b> — Serasa Experian; Poder360, 07/04/2026</li><li><b>Mortalidade em 5 anos: MEI 29%, ME 21,6%, EPP 17%; comércio 30,2%, ind. transformação 27,3%, serviços 26,6%, agro 18%</b> — Sebrae — Sobrevivência das Empresas no Brasil (2020) · <a href="https://agenciasebrae.com.br/economia-e-politica/tres-em-cada-10-mei-fecham-as-portas-em-ate-cinco-anos-de-atividade-no-brasil/">https://agenciasebrae.com.br/economia-e-politica/tres-em-cada-10-mei-fecham-as-portas-em-ate-cinco-anos-de-atividade-no-brasil/</a></li><li><b>Prazo do Simples híbrido até 30/10/2026; janelas em março e setembro</b> — Serpro; Resolução CGSN 194/2026; Manual da opção (Receita) · <a href="https://www.serpro.gov.br/menu/noticias/noticias-2026/opcao-simples-hibrido">https://www.serpro.gov.br/menu/noticias/noticias-2026/opcao-simples-hibrido</a></li><li><b>Alíquota da CBS: Senado fixa até 15/12/2026; estimativa não oficial 9,21% CBS + 18,7% IBS</b> — Senado Notícias, 26/10/2026; O Globo, 28/10/2026 · <a href="https://www12.senado.leg.br/noticias/materias/2026/10/26/reforma-tributaria-aliquota-da-cbs-avanca-nesta-semana">https://www12.senado.leg.br/noticias/materias/2026/10/26/reforma-tributaria-aliquota-da-cbs-avanca-nesta-semana</a></li><li><b>Split payment: testes desde 15/10/2026; início gradual no 2º sem/2027 em B2B</b> — Receita Federal; Comsefaz, 09/10/2026 · <a href="https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/">https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/</a></li><li><b>Pronampe: teto de Selic + 6% a.a.; limite ligado à receita bruta do ano anterior</b> — Lei 13.999/2020 (compilada); gov.br/MEMP · <a href="https://www.gov.br/memp/pt-br/programa-acredita/novo-desenrola-brasil/novo-pronampe">https://www.gov.br/memp/pt-br/programa-acredita/novo-desenrola-brasil/novo-pronampe</a></li><li><b>Cronograma da reforma (2026 teste; 2027 CBS; 2029–2032 transição; 2033 completo)</b> — EC 132/2023; LC 214/2025; TCU — Painel da Reforma · <a href="https://sites.tcu.gov.br/recursos/reforma-tributaria/">https://sites.tcu.gov.br/recursos/reforma-tributaria/</a></li></ol></body></html>

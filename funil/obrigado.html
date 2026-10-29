@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://planejamento2027.vercel.app/obrigado.html">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Obrigado | Não Vire Estatística</title>
+<meta name="theme-color" content="#05080f">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="config.js"></script>
+<script src="assets/js/common.js"></script>
+</head>
+<body class="post-page">
+<div class="offer-head"><div class="wrap wrap-narrow">
+  <div class="ok"><b>🎉</b> <span><b>Tudo certo!</b> Sua compra foi registrada.</span></div>
+  <div class="steps-bar"><span class="done">✓ Compra</span><span class="done">✓ Oferta</span><span class="on">Acesso</span></div>
+</div></div>
+<main class="post-main"><div class="wrap wrap-narrow">
+  <h1>Obrigado<span id="nome"></span>! <span class="hl">Seu acesso está a caminho.</span></h1>
+  <div class="card" style="margin-top:18px">
+    <h3 style="margin-bottom:16px">Próximos passos</h3>
+    <ol class="steps-list">
+      <li><b>Abra o seu e-mail.</b> <span style="color:var(--soft)">O acesso é enviado para o e-mail usado no checkout assim que o pagamento é aprovado. No Pix, isso costuma levar poucos minutos.</span></li>
+      <li><b>Não achou?</b> <span style="color:var(--soft)">Procure nas abas Promoções e Spam pelo nome do kit ou pela plataforma de pagamento.</span></li>
+      <li><b>Comece pelo Dia 1</b> <span style="color:var(--soft)">do Plano de 30 Dias e faça o Diagnóstico de Sobrevivência.</span></li>
+    </ol>
+    <a id="wa" class="btn btn-cta hidden" href="#" target="_blank" rel="noopener">Entrar no WhatsApp de boas-vindas</a>
+    <p class="small muted" style="margin-top:12px">Precisa de ajuda? Escreva para <a id="mail" href="#" data-cfg="empresa.email"></a>.</p>
+  </div>
+  <p class="small muted" style="margin-top:16px">Garantia de <span data-cfg="produto.garantiaDias">7</span> dias: o reembolso é pedido pela plataforma de pagamento, pelo link que vem no e-mail da compra.</p>
+</div></main>
+<footer id="site-footer"></footer>
+<script>
+(function(){var N=window.NVE,C=N.CFG,l=N.getLead();
+if(l&&l.nome)document.getElementById("nome").textContent=", "+l.nome.split(/\s+/)[0];
+if(C.whatsappBoasVindas){var w=document.getElementById("wa");w.href=C.whatsappBoasVindas;w.classList.remove("hidden");}
+var e=C.empresa&&C.empresa.email;var m=document.getElementById("mail");if(e&&e.indexOf("[")!==0)m.href="mailto:"+e;else m.parentNode.style.display="none";})();
+</script>
+</body>
+</html>

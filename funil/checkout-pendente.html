@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://planejamento2027.vercel.app/checkout-pendente.html">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Checkout em configuração | Não Vire Estatística</title>
+<meta name="theme-color" content="#05080f">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="config.js"></script>
+<script src="assets/js/common.js"></script>
+</head>
+<body data-no-pageview>
+<main class="wrap" style="padding:40px 20px">
+  <div class="card">
+    <h1 style="font-size:1.4rem">O checkout ainda não foi configurado</h1>
+    <p>Esta página aparece porque o link de checkout da edição <b id="seg"></b> está vazio em <code>config.js → checkout</code>.</p>
+    <p>Cole o link da Cakto (ex.: <code>https://pay.cakto.com.br/AbC123x</code>) e publique de novo. As UTMs e os dados do lead são anexados automaticamente.</p>
+    <p class="small muted">Parâmetros que seriam enviados ao checkout:</p>
+    <pre id="params" style="white-space:pre-wrap;background:#f1f5f9;padding:12px;border-radius:10px;font-size:.8rem"></pre>
+    <a class="btn btn-accent" href="index.html">Voltar ao início</a>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+(function(){var p=new URLSearchParams(location.search);document.getElementById("seg").textContent=p.get("seg")||"?";
+var o=[];p.forEach(function(v,k){o.push(k+" = "+v)});document.getElementById("params").textContent=o.join("\n")||"(nenhum)";})();
+</script>
+</body>
+</html>

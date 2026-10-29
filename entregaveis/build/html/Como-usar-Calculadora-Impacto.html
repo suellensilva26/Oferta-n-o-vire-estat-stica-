@@ -1,0 +1,63 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Como usar a Calculadora de Impacto</title><style>
+@page{size:A4;margin:18mm 16mm 18mm 16mm}
+@page:first{margin:0}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,Arial,sans-serif;color:#141a26;font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;color:#0b1220;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:22pt;margin:0 0 10pt;font-weight:900}
+h2{font-size:15pt;margin:20pt 0 8pt;font-weight:800;border-left:5px solid #fcc419;padding-left:10px}
+h3{font-size:12pt;margin:14pt 0 6pt;font-weight:800}
+p{margin:0 0 8pt}ul,ol{margin:0 0 9pt;padding-left:18pt}li{margin-bottom:3pt}
+a{color:#0b6b35}
+.cover{height:297mm;width:210mm;background:#05080f;color:#f5f7fb;padding:30mm 20mm;position:relative;page-break-after:always;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:-40mm -40mm auto auto;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle,rgba(252,196,25,.22),transparent 65%)}
+.cover .kick{font-family:Montserrat;font-weight:800;letter-spacing:.2em;font-size:9pt;color:#fcc419;text-transform:uppercase}
+.cover h1{color:#fff;font-size:34pt;line-height:1.06;margin:14pt 0 12pt;max-width:160mm}
+.cover h1 em{font-style:normal;color:#fcc419}
+.cover .sub{font-size:13pt;color:#cbd5e1;max-width:150mm}
+.cover .badge{display:inline-block;margin-top:18pt;background:#22c55e;color:#04210f;font-weight:800;padding:7pt 12pt;border-radius:8pt;font-size:10pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:8.5pt;color:#8b98ad;border-top:1px solid rgba(255,255,255,.15);padding-top:8pt}
+.cover .mark{width:46pt;height:46pt;border-radius:12pt;background:linear-gradient(135deg,#fcc419,#f59f00);display:flex;align-items:center;justify-content:center;font:900 22pt Montserrat;color:#1a1300;margin-bottom:26pt}
+.pb{page-break-before:always}
+.avoid{page-break-inside:avoid}
+.box{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt 12pt;margin:10pt 0;background:#f8fafc;page-break-inside:avoid}
+.box.gold{background:#fff8e1;border-color:#f5d36b}
+.box.green{background:#ecfdf3;border-color:#a7e9c0}
+.box.red{background:#fef2f2;border-color:#f6c1c1}
+.box.dark{background:#0b1220;color:#e7ecf5;border-color:#0b1220}.box.dark h3{color:#fcc419;margin-top:0}
+.box h3:first-child{margin-top:0}
+.kick{font-family:Montserrat;font-weight:800;letter-spacing:.14em;font-size:8pt;color:#b7860b;text-transform:uppercase}
+.big{font:900 26pt Montserrat;color:#0b1220;line-height:1}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8pt;margin:10pt 0}
+.stat{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt;page-break-inside:avoid}
+.stat b{display:block;font:900 20pt Montserrat;color:#0b1220}.stat span{font-size:9pt;color:#4b5565}.stat i{display:block;font-style:normal;font-size:7.5pt;color:#8b98ad;margin-top:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;page-break-inside:auto}
+th{background:#0b1220;color:#fff;text-align:left;padding:6pt 7pt;font-weight:700}
+td{border-bottom:1px solid #e3e7ef;padding:6pt 7pt;vertical-align:top}
+tr{page-break-inside:avoid}
+tr:nth-child(even) td{background:#f8fafc}
+.n{text-align:right;white-space:nowrap}
+.chk{display:flex;gap:8pt;padding:6pt 0;border-bottom:1px dashed #d5dbe5;page-break-inside:avoid}
+.chk:before{content:"";flex:0 0 11pt;height:11pt;border:1.6px solid #0b1220;border-radius:3pt;margin-top:2pt}
+.small{font-size:8.8pt}.muted{color:#5b6576}
+.src{font-size:7.8pt;color:#6b7585}
+.pill{display:inline-block;font-size:7.5pt;font-weight:800;padding:1pt 6pt;border-radius:20pt;background:#eef2f7;color:#334155;letter-spacing:.04em;text-transform:uppercase}
+.pill.caixa{background:#e0f2fe;color:#075985}.pill.margem{background:#fef3c7;color:#92400e}.pill.fiscal{background:#ede9fe;color:#5b21b6}
+.toc li{margin-bottom:5pt}
+.line{border-bottom:1px solid #9aa3b2;height:18pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.script{border-left:4px solid #22c55e;background:#f4fbf6;padding:8pt 11pt;margin:7pt 0 10pt;border-radius:0 8pt 8pt 0;page-break-inside:avoid;white-space:pre-wrap}
+.faca{border:2px solid #22c55e;border-radius:10pt;padding:9pt 12pt;margin:10pt 0;background:#f0fdf4;page-break-inside:avoid}
+.faca:before{content:"FAÇA AGORA";display:block;font:800 8pt Montserrat;letter-spacing:.14em;color:#15803d;margin-bottom:4pt}
+.nota{font-size:9pt;color:#4b5565;border-left:3px solid #cbd5e1;padding-left:8pt}
+.footer-note{font-size:7.8pt;color:#8b98ad;margin-top:16pt;border-top:1px solid #e3e7ef;padding-top:6pt}
+</style></head><body><section class="cover"><div class="mark">N</div><div class="kick">Calculadora de Impacto da Reforma</div><h1>Como usar a <em>Calculadora de Impacto</em></h1><p class="sub">Em 15 minutos você descobre quanto a reforma mexe no imposto, na margem e no preço do seu negócio.</p><span class=badge>Planilha Excel / Google Planilhas</span><div class="foot">Conteúdo educativo, com dados checados em 28/10/2026. Não substitui contador ou advogado. Connect Mídia · Kit Não Vire Estatística</div></section><h1>Passo a passo</h1>
+<h3>1. Abra a planilha</h3><p>Excel: abra o arquivo direto. Google Planilhas: drive.google.com → Novo → Upload de arquivo → clique no arquivo → "Abrir com Planilhas Google". No celular, use o app Google Planilhas.</p>
+<h3>2. Aba "1. Seus dados"</h3><p>Preencha só as células amarelas: faturamento por mês, compras com nota, quanto das compras vem de fornecedores do regime regular, folha, outras despesas, regime atual, impostos sobre a venda hoje e quanto disso é PIS/Cofins, créditos que você já aproveita e % das vendas para empresas.</p>
+<h3>3. Aba "2. Alíquotas" (editável)</h3><p>Traz as estimativas não oficiais (CBS 9,21% e IBS 18,7%) e o cronograma de transição. <b>Quando o Senado publicar a alíquota oficial da CBS (até 15/12/2026), troque a célula.</b> Tudo recalcula. Se o seu item tem redução de 30% ou 60%, ou alíquota zero, ajuste o campo "Redução".</p>
+<h3>4. Aba "3. Resultado"</h3><p>Mostra, ano a ano (2026 a 2033): imposto sobre consumo estimado, créditos, imposto líquido, carga sobre o faturamento e a variação em relação a hoje, além do <b>reajuste de preço necessário para manter o lucro</b>.</p>
+<h3>5. Aba "4. Simples: por dentro x híbrido"</h3><p>Só para o Simples. Compara o crédito que o seu cliente empresa aproveita e o custo estimado das duas opções.</p>
+<div class="box gold"><h3>Como interpretar</h3><ul style="margin:0"><li><b>Variação positiva</b> na carga: a reforma tende a pesar mais. Revise preço, custos e créditos.</li><li><b>Variação negativa</b>: a reforma tende a aliviar. Ótimo, mas não baixe o preço antes de confirmar com o contador.</li><li>Tudo é <b>estimativa</b>: o resultado ajuda a decidir e a fazer as perguntas certas ao contador.</li></ul></div>
+<h2>Limites da calculadora</h2><ul><li>Não considera regimes específicos (combustíveis, financeiro, imóveis, cooperativas, Zona Franca).</li><li>Assume que os fornecedores do regime regular repassam o IBS/CBS no preço.</li><li>Benefícios de ICMS e substituição tributária não são simulados.</li><li>Alíquotas de 2027 em diante ainda não são oficiais.</li></ul>
+<div class="faca">Preencha a aba 1 com os números do último mês e anote: carga hoje ____% · carga em 2027 ____% · em 2033 ____% · reajuste necessário ____%. Leve ao contador.</div></body></html>

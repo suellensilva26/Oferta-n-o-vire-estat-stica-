@@ -1,0 +1,71 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Modelos de decisão com o contador</title><style>
+@page{size:A4;margin:18mm 16mm 18mm 16mm}
+@page:first{margin:0}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,Arial,sans-serif;color:#141a26;font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;color:#0b1220;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:22pt;margin:0 0 10pt;font-weight:900}
+h2{font-size:15pt;margin:20pt 0 8pt;font-weight:800;border-left:5px solid #fcc419;padding-left:10px}
+h3{font-size:12pt;margin:14pt 0 6pt;font-weight:800}
+p{margin:0 0 8pt}ul,ol{margin:0 0 9pt;padding-left:18pt}li{margin-bottom:3pt}
+a{color:#0b6b35}
+.cover{height:297mm;width:210mm;background:#05080f;color:#f5f7fb;padding:30mm 20mm;position:relative;page-break-after:always;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:-40mm -40mm auto auto;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle,rgba(252,196,25,.22),transparent 65%)}
+.cover .kick{font-family:Montserrat;font-weight:800;letter-spacing:.2em;font-size:9pt;color:#fcc419;text-transform:uppercase}
+.cover h1{color:#fff;font-size:34pt;line-height:1.06;margin:14pt 0 12pt;max-width:160mm}
+.cover h1 em{font-style:normal;color:#fcc419}
+.cover .sub{font-size:13pt;color:#cbd5e1;max-width:150mm}
+.cover .badge{display:inline-block;margin-top:18pt;background:#22c55e;color:#04210f;font-weight:800;padding:7pt 12pt;border-radius:8pt;font-size:10pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:8.5pt;color:#8b98ad;border-top:1px solid rgba(255,255,255,.15);padding-top:8pt}
+.cover .mark{width:46pt;height:46pt;border-radius:12pt;background:linear-gradient(135deg,#fcc419,#f59f00);display:flex;align-items:center;justify-content:center;font:900 22pt Montserrat;color:#1a1300;margin-bottom:26pt}
+.pb{page-break-before:always}
+.avoid{page-break-inside:avoid}
+.box{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt 12pt;margin:10pt 0;background:#f8fafc;page-break-inside:avoid}
+.box.gold{background:#fff8e1;border-color:#f5d36b}
+.box.green{background:#ecfdf3;border-color:#a7e9c0}
+.box.red{background:#fef2f2;border-color:#f6c1c1}
+.box.dark{background:#0b1220;color:#e7ecf5;border-color:#0b1220}.box.dark h3{color:#fcc419;margin-top:0}
+.box h3:first-child{margin-top:0}
+.kick{font-family:Montserrat;font-weight:800;letter-spacing:.14em;font-size:8pt;color:#b7860b;text-transform:uppercase}
+.big{font:900 26pt Montserrat;color:#0b1220;line-height:1}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8pt;margin:10pt 0}
+.stat{border:1px solid #e3e7ef;border-radius:10pt;padding:10pt;page-break-inside:avoid}
+.stat b{display:block;font:900 20pt Montserrat;color:#0b1220}.stat span{font-size:9pt;color:#4b5565}.stat i{display:block;font-style:normal;font-size:7.5pt;color:#8b98ad;margin-top:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0 12pt;font-size:9.4pt;page-break-inside:auto}
+th{background:#0b1220;color:#fff;text-align:left;padding:6pt 7pt;font-weight:700}
+td{border-bottom:1px solid #e3e7ef;padding:6pt 7pt;vertical-align:top}
+tr{page-break-inside:avoid}
+tr:nth-child(even) td{background:#f8fafc}
+.n{text-align:right;white-space:nowrap}
+.chk{display:flex;gap:8pt;padding:6pt 0;border-bottom:1px dashed #d5dbe5;page-break-inside:avoid}
+.chk:before{content:"";flex:0 0 11pt;height:11pt;border:1.6px solid #0b1220;border-radius:3pt;margin-top:2pt}
+.small{font-size:8.8pt}.muted{color:#5b6576}
+.src{font-size:7.8pt;color:#6b7585}
+.pill{display:inline-block;font-size:7.5pt;font-weight:800;padding:1pt 6pt;border-radius:20pt;background:#eef2f7;color:#334155;letter-spacing:.04em;text-transform:uppercase}
+.pill.caixa{background:#e0f2fe;color:#075985}.pill.margem{background:#fef3c7;color:#92400e}.pill.fiscal{background:#ede9fe;color:#5b21b6}
+.toc li{margin-bottom:5pt}
+.line{border-bottom:1px solid #9aa3b2;height:18pt}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.script{border-left:4px solid #22c55e;background:#f4fbf6;padding:8pt 11pt;margin:7pt 0 10pt;border-radius:0 8pt 8pt 0;page-break-inside:avoid;white-space:pre-wrap}
+.faca{border:2px solid #22c55e;border-radius:10pt;padding:9pt 12pt;margin:10pt 0;background:#f0fdf4;page-break-inside:avoid}
+.faca:before{content:"FAÇA AGORA";display:block;font:800 8pt Montserrat;letter-spacing:.14em;color:#15803d;margin-bottom:4pt}
+.nota{font-size:9pt;color:#4b5565;border-left:3px solid #cbd5e1;padding-left:8pt}
+.footer-note{font-size:7.8pt;color:#8b98ad;margin-top:16pt;border-top:1px solid #e3e7ef;padding-top:6pt}
+</style></head><body><section class="cover"><div class="mark">N</div><div class="kick">Kit Implementação 2027</div><h1>Modelos de decisão com o <em>contador</em></h1><p class="sub">Uma folha de decisão por segmento, para sair de cada reunião com a escolha feita, o número que a justifica e o prazo.</p><span class=badge>Comércio · Serviços · Indústria/Agro/B2B</span><div class="foot">Conteúdo educativo, com dados checados em 28/10/2026. Não substitui contador ou advogado. Connect Mídia · Kit Não Vire Estatística</div></section><h1>Como usar</h1><p>Cada modelo tem: (1) os números que você leva, (2) a pergunta que o contador responde, (3) a decisão e (4) o prazo. Preencha a lápis durante a reunião e guarde junto com o Roteiro do Contador.</p>
+<h2>Modelo 0 · Simples por dentro x híbrido (todos os segmentos)</h2>
+<table><tr><th>Item</th><th class="n">Por dentro</th><th class="n">Híbrido</th></tr>
+<tr><td>Faturamento médio por mês</td><td>R$</td><td>R$</td></tr>
+<tr><td>% das vendas para empresas do regime regular</td><td>%</td><td>%</td></tr>
+<tr><td>DAS total do mês (com IBS/CBS no caso por dentro)</td><td>R$</td><td>R$</td></tr>
+<tr><td>IBS/CBS a pagar fora do DAS</td><td>—</td><td>R$</td></tr>
+<tr><td>(−) créditos das compras</td><td>—</td><td>R$</td></tr>
+<tr><td>Custo extra de contabilidade/sistema</td><td>—</td><td>R$</td></tr>
+<tr><td><b>Custo total de impostos</b></td><td><b>R$</b></td><td><b>R$</b></td></tr>
+<tr><td>Crédito que o cliente PJ aproveita a cada R$ 1.000</td><td>R$</td><td>R$</td></tr>
+<tr><td>Risco de perder cliente PJ se não gerar crédito cheio</td><td>baixo / médio / alto</td><td>—</td></tr></table>
+<div class="box gold"><h3>Matriz de decisão</h3><table style="margin:0"><tr><th></th><th>Vende pouco para PJ</th><th>Vende muito para PJ</th></tr>
+<tr><td><b>Compra pouco com nota de fornecedor do regime regular</b></td><td>Por dentro (tendência forte)</td><td>Fazer a conta: o crédito do cliente pode compensar</td></tr>
+<tr><td><b>Compra muito com nota de fornecedor do regime regular</b></td><td>Fazer a conta: os créditos podem compensar</td><td>Híbrido (tendência forte)</td></tr></table></div>
+<p><b>Decisão:</b> ( ) Por dentro &nbsp; ( ) Híbrido a partir de ____/____ &nbsp;&nbsp; <b>Revisar em:</b> ( ) março ( ) setembro de ______</p>
+<p class="small muted">Prazos: opção para jan–jun/2027 até 30/10/2026 (cancelamento de 03/11 a 20/12/2026); depois, janelas em março (efeito no 2º semestre) e setembro (efeito em janeiro).</p><h2 class="pb">Modelo 1 · Comércio e Alimentação</h2><div class="box avoid"><h3>1. Classificação dos produtos</h3><p class="small"><b>Leve:</b> Lista dos 50 itens mais vendidos com NCM<br><b>Pergunte:</b> Quais têm alíquota zero (cesta básica) ou redução de 60%? Algum NCM está errado?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Corrigir cadastro até 31/12/2026</p></div><div class="box avoid"><h3>2. Tabela de preços 2027</h3><p class="small"><b>Leve:</b> Margem atual dos 20 itens principais (simulador do app)<br><b>Pergunte:</b> Qual o efeito estimado da CBS e do fim do IPI no meu preço e no custo dos fornecedores?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Nova tabela até a 1ª semana de janeiro</p></div><div class="box avoid"><h3>3. Bebidas e Imposto Seletivo</h3><p class="small"><b>Leve:</b> Lista de bebidas e itens afetados que você revende<br><b>Pergunte:</b> Quanto o fornecedor deve repassar a partir de 2027?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Renegociar ou ajustar preço até janeiro</p></div><div class="box avoid"><h3>4. Maquininha e split payment</h3><p class="small"><b>Leve:</b> Taxas atuais e volume no cartão/Pix<br><b>Pergunte:</b> Como a credenciadora vai tratar o split e o que muda no valor líquido?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Pedir posição por escrito até jun/2027</p></div><h2 class="pb">Modelo 2 · Serviços</h2><div class="box avoid"><h3>1. Redução de alíquota</h3><p class="small"><b>Leve:</b> Descrição exata dos serviços e registro profissional<br><b>Pergunte:</b> A atividade tem redução de 30% (profissão regulamentada) ou 60% (saúde/educação)?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Confirmar por escrito até 31/12/2026</p></div><div class="box avoid"><h3>2. Preço da hora</h3><p class="small"><b>Leve:</b> Folha + encargos + pró-labore + horas faturáveis<br><b>Pergunte:</b> Qual o preço mínimo por hora em 2027 e com o IBS em 2029+?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Nova tabela até janeiro</p></div><div class="box avoid"><h3>3. Contratos</h3><p class="small"><b>Leve:</b> Lista de contratos com prazo, valor e cláusula de reajuste<br><b>Pergunte:</b> Quais precisam de aditivo com cláusula tributária?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Aditivos assinados até mar/2027</p></div><div class="box avoid"><h3>4. Regime com folha alta</h3><p class="small"><b>Leve:</b> Folha ÷ faturamento<br><b>Pergunte:</b> Com poucos créditos, qual regime é melhor de 2027 em diante?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Decidir antes da janela de março</p></div><h2 class="pb">Modelo 3 · Indústria, Agro e B2B</h2><div class="box avoid"><h3>1. Mapa de créditos</h3><p class="small"><b>Leve:</b> Compras por tipo: insumos, energia, frete, máquinas, serviços<br><b>Pergunte:</b> Quanto vira crédito de IBS/CBS no modelo novo? Algo deixa de gerar?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Mapa pronto até 31/12/2026</p></div><div class="box avoid"><h3>2. Fornecedores</h3><p class="small"><b>Leve:</b> Lista dos 10 maiores com regime de cada um<br><b>Pergunte:</b> Vale trocar fornecedor do Simples/MEI por um do regime regular? Qual o preço líquido de crédito?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Revisar cotações até mar/2027</p></div><div class="box avoid"><h3>3. Benefícios de ICMS e IPI</h3><p class="small"><b>Leve:</b> Benefícios atuais e produtos com IPI<br><b>Pergunte:</b> Qual o efeito do IPI zero em 2027 e da redução dos benefícios de 2029 a 2032?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Simulação até jun/2027</p></div><div class="box avoid"><h3>4. Split payment e capital de giro</h3><p class="small"><b>Leve:</b> Prazo médio de recebimento e de pagamento<br><b>Pergunte:</b> Quanto de caixa deixo de ter entre vender e recolher? Preciso de capital de giro extra?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Plano de caixa até o 2º sem/2027</p></div><div class="box avoid"><h3>5. Produtor rural e cooperativas</h3><p class="small"><b>Leve:</b> Compras de produtor rural PF e cooperativas<br><b>Pergunte:</b> Como funciona o crédito presumido nessas compras?</p><p class="small"><b>Resposta / número:</b></p><div class="line"></div><div class="line"></div><p class="small" style="margin-top:6pt"><b>Decisão:</b> ______________________________________ &nbsp; <b>Prazo sugerido:</b> Confirmar até mar/2027</p></div><p class="footer-note">Modelos de apoio à conversa com o contador. As decisões tributárias devem ser validadas por profissional habilitado.</p></body></html>

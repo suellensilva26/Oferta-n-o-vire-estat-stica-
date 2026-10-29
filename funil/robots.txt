@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /upsell.html
+Disallow: /downsell.html
+Disallow: /obrigado.html
+Disallow: /checkout-pendente.html
+
+Sitemap: https://planejamento2027.vercel.app/sitemap.xml
