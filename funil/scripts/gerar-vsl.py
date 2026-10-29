@@ -17,11 +17,10 @@ for s in secs:
   body='\n'.join(l for l in s.split('\n')[1:] if not l.strip().startswith('*Tela'))
   q=' '.join(re.findall(r'"([^"]+)"|“([^”]+)”',body) and [a or b for a,b in re.findall(r'"([^"]+)"|“([^”]+)”',body)])
   if not q: continue
-  if offer is None and re.search(r'oferta|pre[çc]o|R\$',title,re.I): offer=cum
+  if offer is None and re.search(r'oferta',title,re.I): offer=cum
   for sen in re.findall(r'[^.!?]+[.!?]*',q):
     sen=sen.strip()
     if len(sen)<3: continue
-    if offer is None and re.search(r'R\$ ?\d',sen): offer=cum
     i+=1;a=f'{d}/{i}.mp3'
     asyncio.run(edge_tts.Communicate(sen,'pt-BR-AntonioNeural',rate='+8%').save(a))
     du=float(subprocess.check_output(['ffprobe','-v','0','-show_entries','format=duration','-of','csv=p=0',a]))

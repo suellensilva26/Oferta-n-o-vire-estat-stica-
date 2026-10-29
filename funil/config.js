@@ -54,8 +54,8 @@ window.FUNIL_CONFIG = {
      ctaSegundos = em que segundo do vídeo o botão de compra aparece (início do pitch). */
   vsl: {
     A: { embedUrl: "", ctaSegundos: 183 },
-    B: { embedUrl: "", ctaSegundos: 420 },
-    C: { embedUrl: "", ctaSegundos: 420 }
+    B: { embedUrl: "", ctaSegundos: 150 },
+    C: { embedUrl: "", ctaSegundos: 147 }
   },
   /* Sem vídeo configurado: false = a oferta só aparece depois de ctaSegundos com a página aberta (padrão).
      Para ver a página já "revelada" (testes e prints), abra a VSL com ?revelar=1. Com ?revelar=0 você vê o estado antes do pitch. */
